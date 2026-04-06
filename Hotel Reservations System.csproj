@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BAB1106-4242-49D9-ABE6-72055725D51F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel_Reservations_System</RootNamespace>
+    <AssemblyName>Hotel Reservations System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="SiticoneNetFrameworkUI, Version=2026.1.20.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\SiticoneNetFrameworkUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Notifications\ctrlNotificationData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notifications\ctrlNotificationData.Designer.cs">
+      <DependentUpon>ctrlNotificationData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\ctrlReservationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservations\ctrlReservationDetails.Designer.cs">
+      <DependentUpon>ctrlReservationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomData.Designer.cs">
+      <DependentUpon>ctrlRoomData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerDataWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerDataWithFilter.Designer.cs">
+      <DependentUpon>ctrlCustomerDataWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomDataWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomDataWithFilter.Designer.cs">
+      <DependentUpon>ctrlRoomDataWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\ctrlUserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees\ctrlUserDetails.Designer.cs">
+      <DependentUpon>ctrlUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmAccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAccountInfo.Designer.cs">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmAddUpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmAddUpdateRoom.Designer.cs">
+      <DependentUpon>frmAddUpdateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmAddUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmAddUpdateCustomer.Designer.cs">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomerDetails.Designer.cs">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmNotifications.Designer.cs">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmReservationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmReservationDetails.Designer.cs">
+      <DependentUpon>frmReservationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmReservationList.Designer.cs">
+      <DependentUpon>frmReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmReturnRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmReturnRoom.Designer.cs">
+      <DependentUpon>frmReturnRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmToast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmToast.Designer.cs">
+      <DependentUpon>frmToast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmUserDetails.Designer.cs">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmUsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmUsersList.Designer.cs">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerData.Designer.cs">
+      <DependentUpon>ctrlCustomerData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\ctrlPersonData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Person\ctrlPersonData.Designer.cs">
+      <DependentUpon>ctrlPersonData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmAddUpdateReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmAddUpdateReservation.Designer.cs">
+      <DependentUpon>frmAddUpdateReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomersList.Designer.cs">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmRoomDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmRoomDetails.Designer.cs">
+      <DependentUpon>frmRoomDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmRoomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmRoomList.Designer.cs">
+      <DependentUpon>frmRoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Global Classes\Program.cs" />
+    <Compile Include="Global Classes\util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Notifications\ctrlNotificationData.resx">
+      <DependentUpon>ctrlNotificationData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\ctrlReservationDetails.resx">
+      <DependentUpon>ctrlReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\ctrlRoomData.resx">
+      <DependentUpon>ctrlRoomData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\ctrlCustomerDataWithFilter.resx">
+      <DependentUpon>ctrlCustomerDataWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\ctrlRoomDataWithFilter.resx">
+      <DependentUpon>ctrlRoomDataWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\ctrlUserDetails.resx">
+      <DependentUpon>ctrlUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAccountInfo.resx">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmAddUpdateRoom.resx">
+      <DependentUpon>frmAddUpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmAddUpdateCustomer.resx">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\ctrlCustomerData.resx">
+      <DependentUpon>ctrlCustomerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\ctrlPersonData.resx">
+      <DependentUpon>ctrlPersonData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmAddUpdateReservation.resx">
+      <DependentUpon>frmAddUpdateReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomerDetails.resx">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomersList.resx">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmLogin.aa-DJ.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmNotifications.resx">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmReservationDetails.resx">
+      <DependentUpon>frmReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmReservationList.resx">
+      <DependentUpon>frmReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmReturnRoom.resx">
+      <DependentUpon>frmReturnRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmRoomDetails.resx">
+      <DependentUpon>frmRoomDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmRoomList.resx">
+      <DependentUpon>frmRoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmToast.resx">
+      <DependentUpon>frmToast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmUserDetails.resx">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmUsersList.resx">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include=".gitignore" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRS1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRS2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRS3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueInfoPic.jpg" />
+    <None Include="Resources\WarningPic2.jpg" />
+    <None Include="Resources\ErrorPic.jpg" />
+    <None Include="Resources\WarningPic.jpg" />
+    <None Include="Resources\InformationPic1.jpg" />
+    <None Include="Resources\photo_2026-01-25_12-08-07.jpg" />
+    <None Include="Resources\List 32.png" />
+    <None Include="Resources\1769102086235.jpg" />
+    <None Include="Resources\17690990874661.jpg" />
+    <None Include="Resources\1769099087466.jpg" />
+    <None Include="Resources\Screenshot 2026-01-21 212737.png" />
+    <None Include="Resources\Screenshot 2026-01-21 212743.png" />
+    <None Include="Resources\Screenshot 2026-01-21 153044.png" />
+    <None Include="Resources\Screenshot 2026-01-21 152700.png" />
+    <None Include="Resources\pa1.png" />
+    <None Include="Resources\Screenshot 2026-01-21 151045.png" />
+    <None Include="Resources\Screenshot 2026-01-21 151134.png" />
+    <None Include="Resources\Screenshot 2026-01-21 150907.png" />
+    <None Include="Resources\Screenshot 2026-01-20 231339.png" />
+    <None Include="Resources\17685886707961.jpg" />
+    <None Include="Resources\1768588670796.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global Classes\TextFile1.txt" />
+    <None Include="Resources\InformationIcon.jpg" />
+    <None Include="Resources\InfoIcon.jpg" />
+    <None Include="Resources\account_profile_user_avatar_icon_219236.png" />
+    <None Include="Resources\9815472.png" />
+    <None Include="Resources\Sign Out 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="HRS_BusinessLayer\HRS_BusinessLayer.csproj">
+      <Project>{9a9fb8d7-b221-45d0-a718-93350e6a0177}</Project>
+      <Name>HRS_BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

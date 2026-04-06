@@ -1,0 +1,19 @@
+﻿Notes:
+2-> Roles_Permissions table.
+4-> Try Func Delegate
+5-> Custom Attribute for validation
+7-> Instead of insert reservation, change room status after booked it (triggers)
+9-> Ask about updating initialReservationDays field in frmAddUpdateReservartion
+11-> Features Idea
+
+
+
+6-> Events for notifications DONE
+12-> Update Employee Info DONE
+13-> Add new person (PersonData) DONE
+10-> Edit delete room idea (just be sure) DONE
+8-> After edit reservation -> Logging table CANCELLED
+1-> Use After insert triggers with AddReservation -> Notification table. DONE
+3-> Ask AI about my permission code DONE
+
+
