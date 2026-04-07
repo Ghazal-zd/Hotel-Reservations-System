@@ -144,8 +144,9 @@ namespace Hotel_Reservations_System
 
             foreach (SiticoneCheckBoxAdvanced chx in FeaturesPanel.Controls)
             {
+                dynamic tag = chx.Tag;
                 if (chx.Checked)
-                    tvp.Rows.Add((int)chx.Tag);
+                    tvp.Rows.Add((int)tag.Id);
             }
             return tvp;
         }
